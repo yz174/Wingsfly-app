@@ -1,97 +1,197 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# WingsFly - Task & Habit Management App
 
-# Getting Started
+<div align="center">
+  <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="WingsFly Logo" width="120" height="120" style="border-radius: 20px;">
+  
+  <h3>✈️ Soar to New Heights with Your Daily Goals</h3>
+  
+  <p>A beautiful and intuitive React Native app for managing tasks, habits, and daily goals with motivational quotes and progress tracking.</p>
+</div>
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 Features
 
-## Step 1: Start Metro
+### 🎯 Core Functionality
+- **Task Management** - Create and manage single-instance tasks
+- **Habit Tracking** - Build and maintain daily habits with detailed statistics
+- **Recurring Tasks** - Set up tasks that repeat over time
+- **Goal Setting** - Define and track daily goals
+- **Progress Monitoring** - Visual progress bars and completion tracking
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🎨 User Experience
+- **Beautiful UI** - Clean, modern design with smooth animations
+- **Date Navigation** - Easy date picker for viewing tasks across different days
+- **Motivational Quotes** - Daily inspirational quotes with progress indicators
+- **Interactive Elements** - Smooth animations and micro-interactions
+- **Bottom Drawer** - Elegant task creation interface
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 📊 Task Categories
+- **Habits** - Recurring activities with detailed tracking
+- **Tasks** - One-time activities
+- **Recurring Tasks** - Scheduled repeating activities
+- **Goals of the Day** - Daily targets and objectives
 
-```sh
-# Using npm
-npm start
+## 🛠️ Tech Stack
 
-# OR using Yarn
-yarn start
-```
+- **Framework**: React Native 0.73.4
+- **Language**: TypeScript
+- **State Management**: React Hooks (useState, useEffect)
+- **Animations**: React Native Reanimated 3.6.3
+- **Icons**: React Native Vector Icons
+- **Navigation**: React Native Gesture Handler
+- **Safe Area**: React Native Safe Area Context
 
-## Step 2: Build and run your app
+## 📦 Installation
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### Prerequisites
+- Node.js (>= 16)
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development)
 
-### Android
+### Setup Instructions
 
-```sh
-# Using npm
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd WingsFly
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **iOS Setup** (macOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Android Setup**
+   - Ensure Android Studio is installed
+   - Set up Android SDK and emulator
+
+### Running the App
+
+#### Android
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+#### iOS
+```bash
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+#### Development Server
+```bash
+npm start
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🏗️ Project Structure
 
-## Step 3: Modify your app
+```
+src/
+├── components/           # Reusable UI components
+│   ├── BottomDrawer.tsx     # Task creation drawer
+│   ├── DatePicker.tsx       # Date selection component
+│   ├── FloatingActionButton.tsx # FAB for adding tasks
+│   ├── Header.tsx           # App header with navigation
+│   ├── QuoteSection.tsx     # Daily quotes and progress
+│   ├── TaskItem.tsx         # Individual task component
+│   └── TaskList.tsx         # Task list container
+├── screens/              # Screen components
+│   └── HomeScreen.tsx       # Main home screen
+├── types/                # TypeScript type definitions
+│   └── index.ts             # Shared interfaces
+└── App.tsx               # Root application component
+```
 
-Now that you have successfully run the app, let's make changes!
+## 🎨 Design System
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Color Palette
+- **Primary Blue**: `#3b82f6` - Main actions and highlights
+- **Success Green**: `#10b981` - Completed tasks and positive actions
+- **Warning Orange**: `#f59e0b` - Important items and warnings
+- **Purple**: `#8b5cf6` - Creative tasks and meditation
+- **Pink**: `#ec4899` - Art and creative activities
+- **Gray Scale**: Various shades for text and backgrounds
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Typography
+- **Headers**: 16-18px, font-weight: 600
+- **Body Text**: 14px, font-weight: 400
+- **Small Text**: 12px for metadata and tags
+- **Micro Text**: 10px for tags and labels
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Spacing System
+- **Base Unit**: 4px
+- **Small**: 8px, 12px
+- **Medium**: 16px, 20px
+- **Large**: 24px, 32px
 
-## Congratulations! :tada:
+## 🔧 Configuration
 
-You've successfully run and modified your React Native App. :partying_face:
+### Environment Setup
+The app uses standard React Native configuration files:
+- `babel.config.js` - Babel configuration with Reanimated plugin
+- `metro.config.js` - Metro bundler configuration
+- `tsconfig.json` - TypeScript configuration
 
-### Now what?
+### Dependencies
+Key dependencies include:
+- `react-native-reanimated` - Smooth animations
+- `react-native-vector-icons` - Icon library
+- `react-native-gesture-handler` - Touch gestures
+- `react-native-safe-area-context` - Safe area handling
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📱 Screenshots
 
-# Troubleshooting
+*Add screenshots of your app here*
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 🚀 Features in Development
 
-# Learn More
+- [ ] Task persistence with local storage
+- [ ] Push notifications for reminders
+- [ ] Statistics and analytics dashboard
+- [ ] Custom themes and personalization
+- [ ] Social sharing of achievements
+- [ ] Cloud synchronization
+- [ ] Widget support
 
-To learn more about React Native, take a look at the following resources:
+## 🤝 Contributing
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Your Name**
+- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: your.email@example.com
+
+## 🙏 Acknowledgments
+
+- Icons provided by [Material Icons](https://material.io/resources/icons/)
+- Images from [Pexels](https://www.pexels.com/)
+- Inspiration from modern productivity apps
+- React Native community for excellent libraries
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+1. Check the [Issues](https://github.com/yourusername/wingsflyapp/issues) page
+2. Create a new issue with detailed information
+3. Contact the maintainers
+
+---
+
+<div align="center">
+  <p>Made with ❤️ and React Native</p>
+  <p>⭐ Star this repo if you found it helpful!</p>
+</div>
