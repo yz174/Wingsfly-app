@@ -1,7 +1,5 @@
 # WingsFly - Task & Habit Management App
 
-<div align="center">
-  <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="WingsFly Logo" width="120" height="120" style="border-radius: 20px;">
   
   <h3>✈️ Soar to New Heights with Your Daily Goals</h3>
   
@@ -106,28 +104,6 @@ src/
 └── App.tsx               # Root application component
 ```
 
-## 🎨 Design System
-
-### Color Palette
-- **Primary Blue**: `#3b82f6` - Main actions and highlights
-- **Success Green**: `#10b981` - Completed tasks and positive actions
-- **Warning Orange**: `#f59e0b` - Important items and warnings
-- **Purple**: `#8b5cf6` - Creative tasks and meditation
-- **Pink**: `#ec4899` - Art and creative activities
-- **Gray Scale**: Various shades for text and backgrounds
-
-### Typography
-- **Headers**: 16-18px, font-weight: 600
-- **Body Text**: 14px, font-weight: 400
-- **Small Text**: 12px for metadata and tags
-- **Micro Text**: 10px for tags and labels
-
-### Spacing System
-- **Base Unit**: 4px
-- **Small**: 8px, 12px
-- **Medium**: 16px, 20px
-- **Large**: 24px, 32px
-
 ## 🔧 Configuration
 
 ### Environment Setup
@@ -145,7 +121,7 @@ Key dependencies include:
 
 ## 📱 Screenshots
 
-*Add screenshots of your app here*
+https://github.com/yz174/Wingsfly-app/tree/53c0b4582a8211cda7c1ecad029ea01cfc8cf7d3/Snapshots
 
 ## 🚀 Features in Development
 
@@ -169,25 +145,6 @@ Key dependencies include:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- Icons provided by [Material Icons](https://material.io/resources/icons/)
-- Images from [Pexels](https://www.pexels.com/)
-- Inspiration from modern productivity apps
-- React Native community for excellent libraries
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [Issues](https://github.com/yourusername/wingsflyapp/issues) page
-2. Create a new issue with detailed information
-3. Contact the maintainers
 
 ---
 
